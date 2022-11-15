@@ -32,7 +32,7 @@ elseif strcmp(Type_1, 'eSizeShapePeriod')
     kep.SizeShape.Eccentricity = Prm2;
 elseif strcmp(Type_1, 'eSizeShapeMeanMotion')
     kep.SizeShapeType =Type_1;
-    kep.SizeShape.Mean=Prm1;%一天中绕地球旋转的圈数
+    kep.SizeShape.MeanMotion=Prm1;%Matlb中取deg/sec,STK输入中一般默认一天中绕地球旋转的圈数，注意单位转换
     kep.SizeShape.Eccentricity = Prm2;
 end
 
