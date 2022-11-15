@@ -30,7 +30,7 @@ elseif strcmp(Type_1, 'eSizeShapePeriod')
     kep.SizeShapeType =Type_1;
     kep.SizeShape.Period = Prm1;%卫星公转周期
     kep.SizeShape.Eccentricity = Prm2;
-elseif strcmp(Type1, 'eSizeShapeMean')
+elseif strcmp(Type_1, 'eSizeShapeMeanMotion')
     kep.SizeShapeType =Type_1;
     kep.SizeShape.Mean=Prm1;%一天中绕地球旋转的圈数
     kep.SizeShape.Eccentricity = Prm2;
