@@ -42,7 +42,7 @@ kep.Orientation.ArgOfPerigee = Prm4;%近心点辐角
 %RAAN 与 Lon.Ascn.Node 都是指卫星由南半球向北半球运行时穿过赤道的交点的位置，
 %二者是同一个位置，只是在不同坐标系下的不同表达方式。
 %RAAN是升交点赤经，是在地心惯性坐标系下，其X轴向东度量到升交点的地心张角；
-%Lon.Ascn.Node是升交点经度，是在地固坐标系下，升交点对应的经度（东经为正，西经为负）。
+%Lon.Ascn.Node是升交点经度，是在地固坐标系下，升交点对应的经度（东经为正，西经为负）。多用于GEO
 if strcmp(Type_2, 'eAscNodeRAAN')
     kep.Orientation.AscNodeType = Type_2;
     kep.Orientation.AscNode.Value = Prm5;
@@ -51,6 +51,7 @@ elseif strcmp(Type_2, 'eAscNodeLAN')
     kep.Orientation.AscNode.Value = Prm5;
 end
 
+%https://www.bilibili.com/read/cv808205，三种角的区别；https://sat.huijiwiki.com/wiki/%E5%81%8F%E8%BF%91%E7%82%B9%E8%A7%92，对真、平区别的描述更清晰
 if strcmp(Type_3, 'eLocationTrueAnomaly')%真近点角
     kep.LocationType = Type_3;
     kep.Location.Value = Prm6;
